@@ -1,0 +1,13 @@
+ c = j['data']
+     num = [i for i in range(len(c['commentList']))]
+     print(a)
+     for x in num:
+         if (c['commentList'][x]['content'] != "用户未点评，系统默认好评。"):
+          print(c['commentList'][x]['score'])
+          print(c['commentList'][x]['content'])
+          i += 1
+          str1 = 'A' + str(i)
+          str2 = 'B' + str(i)
+          sheet[str1].value = c['commentList'][x]['score']
+          sheet[str2].value = c['commentList'][x]['content']
+          workbook.save(filename ='qunaer1.xlsx')
